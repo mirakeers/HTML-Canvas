@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:300,700" rel="stylesheet);
+
+@font-face {
+    font-family: 'icons';
+    src: url('../font/game-icons.eot');
+    src: url('../font/game-icons.eot?#iefix') format('embedded-opentype'),
+         url('../font/game-icons.woff') format('woff'),
+         url('../font/game-icons.ttf') format('truetype'),
+         url('../font/game-icons.svg#game-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* mute = m; unmute = u; pause = p; play = l; refresh = r*/
+
+#container {
+    width: 1024px;
+    height: 676px;
+    margin: 50px auto;
+}
+#myCanvas {
+    border-style: solid;
+    border-color: black; 
+    border-width: 2px;
+}
+#instructions {
+    width: 1027px;
+}

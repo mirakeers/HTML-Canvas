@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>The Santinator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+    
+<body>
+    <div id="container">
+    <svg version="1.1"
+         baseProfile="full"
+         xmlns="http://www.w3.org/2000/svg"
+         width="1080" height="720" viewbox="0 0 1080 720"
+         id="santinator">
+        
+        <defs>
+            <radialGradient id="glow">
+                  <stop offset="10%" stop-color="#ffffff" stop-opacity="0.6"/>
+                  <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+            </radialGradient>
+            <pattern id="stripes" x="0" y="0" width="0.08" height="1" patternContentUnits="objectBoundingBox">
+                <rect x="0" y="0" width="0.08" height="1" fill="#d8e3ea"/>
+                <rect x="0.06" y="0" width="0.02" height="1" fill="#aebec9"/>
+            </pattern>
+            <pattern id="stripesLighter" x="0" y="0" width="0.08" height="1" patternContentUnits="objectBoundingBox">
+                <rect x="0" y="0" width="0.08" height="1" fill="#d8e3ea"/>
+                <rect x="0.06" y="0" width="0.02" height="1" fill="#b9cad4"/>
+            </pattern>
+        </defs>
+        
+        <rect x="0" y="0" width="1920" height="1080" fill="#004b62"/>
+    
+    <!--HEAD-->
+        
+        <rect x="486" y="144" width="108" height="108" fill="#8ca7b9"/> <!--head-->
+        <rect x="540" y="144" width="54" height="108" fill="#d2dfe8"/> <!--head overlay-->
+        
+        <!--EYES-->
+        <circle  cx="522" cy="198" r="10" stroke="#1e262d" fill="white" stroke-width="1"/> <!--left eyeball-->
+        <circle  cx="522" cy="198" r="3" transform="rotate(-45 522 198) translate(-4 0)" fill="#1e262d" id="leftPupil"/> <!--left pupil-->
+        
+        <circle  cx="558" cy="198" r="10" stroke="#80888f" fill="white" stroke-width="1"/> <!--right eyeball-->
+        <circle  cx="558" cy="198" r="3" transform="rotate(-45 558 198) translate(-4 0)" fill="#1e262d" id="rightPupil"/>  <!--right pupil-->
+        
+        
+        <!--MOUTH-->
+        <rect x="517" y="220" width="8" height="8" fill="#1e262d"/> <!--1st square-->
+        <rect x="525" y="220" width="8" height="8" fill="#a8c0d0"/> <!--2nd square-->
+        <rect x="533" y="220" width="8" height="8" fill="#1e262d"/> <!--3th square-->
+        <rect x="541" y="220" width="8" height="8" fill="#a8c0d0"/> <!--4th square-->
+        <rect x="549" y="220" width="8" height="8" fill="#1e262d"/> <!--5th square-->
+        <rect x="557" y="220" width="8" height="8" fill="#a8c0d0"/> <!--6th square-->
+        
+        
+        <!--EARS-->
+        <polygon points="486 172, 468 180, 468 216, 486 224" fill="#8ca7b9"/> <!--left ear-->
+        <polygon points="594 172, 612 180, 612 216, 594 224" fill="#d2dfe8"/> <!--right ear-->
+        <polyline points="484 186, 480 192, 484 198, 480 204, 484 210" stroke="#6c777e" fill="transparent" stroke-width="1"/>
+        <polyline points="596 186, 600 192, 596 198, 600 204, 596 210" stroke="#8ca7b9" fill="transparent" stroke-width="1"/>
+        
+        <!--SCREWS-->
+        
+        <!--head screws - beginning from top left, following the circle-->
+        <circle  cx="498" cy="156" r="2" fill="#e2f1f9"/> 
+        <circle  cx="519" cy="156" r="2" fill="#e2f1f9"/>
+        <circle  cx="540" cy="156" r="2" fill="#7f9aa6"/>
+        <circle  cx="561" cy="156" r="2" fill="#7f9aa6"/>
+        <circle  cx="582" cy="156" r="2" fill="#7f9aa6"/>
+        <circle  cx="582" cy="177" r="2" fill="#7f9aa6"/>
+        <circle  cx="582" cy="198" r="2" fill="#7f9aa6"/>
+        <circle  cx="582" cy="219" r="2" fill="#7f9aa6"/>
+        <circle  cx="582" cy="240" r="2" fill="#7f9aa6"/>
+        <circle  cx="561" cy="240" r="2" fill="#7f9aa6"/>
+        <circle  cx="540" cy="240" r="2" fill="#7f9aa6"/>
+        <circle  cx="519" cy="240" r="2" fill="#e2f1f9"/>
+        <circle  cx="498" cy="240" r="2" fill="#e2f1f9"/>
+        <circle  cx="498" cy="219" r="2" fill="#e2f1f9"/>
+        <circle  cx="498" cy="198" r="2" fill="#e2f1f9"/>
+        <circle  cx="498" cy="177" r="2" fill="#e2f1f9"/>
+        
+        <!--left ear screws, top to bottom-->
+        <circle  cx="474" cy="186" r="2" fill="#6c777e"/>
+        <circle  cx="474" cy="198" r="2" fill="#6c777e"/>
+        <circle  cx="474" cy="210" r="2" fill="#6c777e"/>
+        
+        <!--right ear screws, top to bottom-->
+        <circle  cx="606" cy="186" r="2" fill="#7f9aa6"/>
+        <circle  cx="606" cy="198" r="2" fill="#7f9aa6"/>
+        <circle  cx="606" cy="210" r="2" fill="#7f9aa6"/>
+    
+        
+        <!--HAT-->
+        <path d="M 486 146 
+                 a 54 54, 0, 0, 1, 54 -54
+                 q 96 0, 96 136
+                 q 0 -40, -54 -81
+                 Z"
+        fill="#f04345"/>  <!--cap-->
+        <path d="M 540 92 
+                 q 96 0, 96 136
+                 q 0 -40, -54 -81
+                 L 540 146
+                 Z"
+        fill="#f46969"/>  <!--cap overlay-->
+    
+        <rect x="477" y="146" width="126" height="30" rx="9" ry="9" fill="#d2dfe8"/> <!--white strip-->
+        <path d="M 540 146 h 54 a 9 9, 0, 0, 1, 9 9 v 12 a 9 9, 0, 0, 1, -9 9 h -54 Z" fill="#ffffff"/>  <!--white strip overlay-->
+        <circle cx="636" cy="226" r="12" fill="#d2dfe8"/> <!--pompon-->
+    
+        
+        <!--ANTENNA-->
+        <ellipse  cx="540" cy="72" rx="17" ry="4" fill="#d2dfe8" />
+        <ellipse  cx="540" cy="72" rx="14" ry="2" fill="#004b62"/> <!--1st ellipse-->
+        <ellipse  cx="540" cy="82" rx="12" ry="3" fill="#d2dfe8"/>
+        <ellipse  cx="540" cy="82" rx="9" ry="1.5" fill="#004b62"/> <!--2nd ellipse-->
+        <rect x="539" y="54" width="2" height="48" rx="1" ry="1" fill="#d2dfe8"/> <!--rod-->
+        <circle  cx="540" cy="54" r="24" fill="url(#glow)"/> <!--bulb glow-->
+        <circle  cx="540" cy="54" r="9" fill="#d2dfe8"/> <!--bulb-->
+        
+        
+        
+    <!--ARMS-->
+        
+        <rect x="414" y="260" width="18" height="62" fill="#d2dfe8"/><!--left shoulder/body connection-->
+        <rect x="387" y="252" width="27" height="78" rx="6" ry="6" fill="#f04345"/><!--left shoulder-->
+        
+        <rect x="648" y="260" width="18" height="62" fill="#d1e0e8"/><!--right shoulder/body connection-->
+        <rect x="666" y="252" width="27" height="78" rx="6" ry="6" fill="#f46969"/><!--right shoulder-->
+        
+        <!--left arm-->
+        <circle  cx="402" cy="342" r="12" fill="#8ca7b9"/>
+        <circle  cx="394" cy="362" r="12" fill="#6a7d8b"/>
+        <circle  cx="400" cy="382" r="12" fill="#8ca7b9"/>
+        <circle  cx="394" cy="402" r="12" fill="#6a7d8b"/>
+        <circle  cx="400" cy="422" r="12" fill="#8ca7b9"/>
+        <circle  cx="390" cy="438" r="12" fill="#6a7d8b"/>
+        <path d="M 390 446 
+                 a 22.5 22.5 0 0 1 12 40
+                 a 15 15 0 1 0 -24 0
+                 a 22.5 22.5 0 0 1 12 -40
+                 Z"
+        fill="#6a7d8b"/> <!--left hand-->
+        
+        <!--right arm-->
+        <circle  cx="678" cy="342" r="12" fill="#d2dfe8"/>
+        <circle  cx="686" cy="362" r="12" fill="#8ca7b8"/>
+        <circle  cx="680" cy="382" r="12" fill="#d2dfe8"/>
+        <circle  cx="686" cy="402" r="12" fill="#8ca7b8"/>
+        <circle  cx="680" cy="422" r="12" fill="#d2dfe8"/>
+        <circle  cx="690" cy="438" r="12" fill="#8ca7b8"/>
+        <path d="M 690 446 
+                 a 22.5 22.5 0 0 1 12 40
+                 a 15 15 0 1 0 -24 0
+                 a 22.5 22.5 0 0 1 12 -40
+                 Z"
+        fill="#8ca7b8"/> <!--right hand-->
+        
+    
+        
+    <!--LEGS-->
+        
+        <polygon points="446 468, 526 468, 516 636, 456 636" fill="#f04345"/> <!--left leg-->
+        <line x1="462" y1="474" x2="462" y2="616" transform="rotate(-4 462 546)" stroke="#f58788" fill="transparent" stroke-width="4" stroke-linecap="round"/><!--left leg 1st stripe-->
+        <line x1="476" y1="474" x2="476" y2="616" transform="rotate(-2 476 546)" stroke="#f58788" fill="transparent" stroke-width="4" stroke-linecap="round"/><!--left leg 2nd stripe-->
+        <line x1="496" y1="474" x2="496" y2="616" transform="rotate(2 496 546)" stroke="#f58788" fill="transparent" stroke-width="4" stroke-linecap="round"/><!--left leg 3th stripe-->
+        <line x1="510" y1="474" x2="510" y2="616" transform="rotate(4 510 546)" stroke="#f58788" fill="transparent" stroke-width="4" stroke-linecap="round"/><!--left leg 4th stripe-->
+        <path d="M 456 636
+                 l -12 30
+                 a 81 81 0 0 0 84 0
+                 l -12 -30
+                 Z"
+        fill="#6a7d8b"/> <!--left foot upperpart-->
+        <path d="M 444 666
+                 l 0 26
+                 a 81 81 0 0 0 84 0
+                 l 0 -26
+                 a 81 81 0 0 1 -84 0
+                 Z"
+        fill="url(#stripes)"/> <!--left foot bottompart-->
+        
+        <polygon points="634 468, 554 468, 564 636, 624 636" fill="#f46969"/> <!--right leg-->
+        <line x1="570" y1="474" x2="570" y2="616" transform="rotate(-4 570 546)" stroke="#e6edf1" fill="transparent" stroke-width="4" stroke-linecap="round"/><!--right leg 1st stripe-->
+        <line x1="584" y1="474" x2="584" y2="616" transform="rotate(-2 584 546)" stroke="#e6edf1" fill="transparent" stroke-width="4" stroke-linecap="round"/><!--right leg 2nd stripe-->
+        <line x1="604" y1="474" x2="604" y2="616" transform="rotate(2 604 546)" stroke="#e6edf1" fill="transparent" stroke-width="4" stroke-linecap="round"/><!--right leg 3th stripe-->
+        <line x1="618" y1="474" x2="618" y2="616" transform="rotate(4 618 546)" stroke="#e6edf1" fill="transparent" stroke-width="4" stroke-linecap="round"/><!--right leg 4th stripe-->   
+        <path d="M 564 636
+                 l -12 30
+                 a 81 81 0 0 0 84 0
+                 l -12 -30
+                 Z"
+        fill="#b9cad4"/> <!--right foot upperpart-->
+        <path d="M 552 666
+                 l 0 26
+                 a 81 81 0 0 0 84 0
+                 l 0 -26
+                 a 81 81 0 0 1 -84 0
+                 Z"
+        fill="url(#stripesLighter)"/> <!--right foot bottompart-->
+        
+        
+        
+    <!--BODY-->
+        
+        <rect x="432" y="252" width="216" height="210" rx="12" ry="12" fill="#d2dfe8"/> <!--body-->
+        <circle  cx="540" cy="300" r="18" fill="#8ca7b9"/> <!--heart-->
+        
+        
+        <!--COAT-->
+        
+        <rect x="432" y="246" width="100" height="236" rx="12" ry="12" fill="#f04345"/> <!--left big square-->
+        <rect x="455" y="274" width="54" height="180" rx="12" ry="12" fill="#f58788"/> <!--left small square-->
+        
+        <circle  cx="482" cy="316" r="14" fill="#f04345"/> <!--left button 1-->
+        <rect x="468" y="312.5" width="28" height="7" transform="rotate(45 482 316)" fill="#ffe5e4"/>
+        <circle  cx="482" cy="364" r="14" fill="#f04345"/> <!--left button 2-->
+        <rect x="468" y="360.5" width="28" height="7" transform="rotate(45 482 364)" fill="#ffe5e4"/>
+        <circle  cx="482" cy="412" r="14" fill="#f04345"/> <!--left button 3-->
+        <rect x="468" y="408.5" width="28" height="7" transform="rotate(45 482 412)" fill="#ffe5e4"/>
+        
+        <rect x="548" y="246" width="100" height="236" rx="12" ry="12" fill="#f46969"/> <!--right big square-->
+    
+    
+        <!--BELT-->
+        <rect x="420" y="404" width="240" height="40" rx="12" ry="12" fill="#d2dfe8"/> <!--belt-->
+        <path d="M 540 404 h 108 a 12 12, 0, 0, 1, 12 12 v 16 a 12 12, 0, 0, 1, -12 12 h -108 Z" fill="#ffffff"/> <!--belt overlay-->
+        <rect x="514" y="398" width="52" height="52" rx="6" ry="6" fill="#6a7d8b"/> <!--buckle outer part-->
+        <rect x="520" y="404" width="40" height="40" rx="6" ry="6" fill="#d2dfe8"/> <!--buckle inner part-->
+        <path d="M 540 404 h 14 a 6 6, 0, 0, 1, 6 6 v 28 a 6 6, 0, 0, 1, -6 6 h -14 Z" fill="#ffffff"/> <!--buckle inner part overlay-->
+        <circle  cx="532" cy="424" r="5" fill="#6a7d8b"/><!--button left-->
+        <circle  cx="548" cy="424" r="5" fill="#6a7d8b"/><!--button right-->
+        
+    <!--MESSAGE-->
+        
+        <text x="108" y="144" font-weight="bold" font-family="Consolas, monospace" font-size="18" fill="#ffffff" id="line1">Hello, i am the Santinator!</text>
+        <text x="108" y="174" font-weight="bold" font-family="Consolas, monospace" font-size="18" fill="#ffffff" id="line2">Have you been good this year?</text>
+        <text x="108" y="214" font-family="Consolas, monospace" font-size="24" fill="#ffffff" id="lineyes">[Y] Yes</text>
+        <text x="108" y="249" font-family="Consolas, monospace" font-size="24" fill="#ffffff" id="lineno">[N] No</text>
+        
+    </svg>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+body {
+    background-color: #06222a;
+}
+#container {
+    width: 1080px;
+    height: 720px;
+    margin: 50px auto;
+}
+
+#instructions {
+    width: 1027px;
+}
